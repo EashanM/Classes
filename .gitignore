@@ -1,3 +1,4 @@
 #Ignore everything but cpp files
 !/*.cpp
 *.txt
+*.out
