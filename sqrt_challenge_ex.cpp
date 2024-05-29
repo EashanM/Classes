@@ -13,9 +13,12 @@ using namespace std;
 // Lower bound for the root = 1 
 // Upper bound for the root = num
 
+
 double my_sqrt(double num){
     double lower = 1;
     double upper =  num;
+    // double estimate; this will enable a return line with estimate 
+    
     // Use these bounds to guess the root
     // Create a for loop to guess and check an answer
     // How can we guess an answer?
@@ -39,7 +42,7 @@ double my_sqrt(double num){
 
     // This method of estimating the root is a foundational concept in mathematical optimization 
     // Convert this into code
-    for (int x = 0; x < 30; x +=1){
+    for (int x = 0; x < 30; x +=1){ // last value of x is 29
         double estimate = (lower + upper)/2;
         if (estimate * estimate > num) {
             upper = estimate;
@@ -48,8 +51,12 @@ double my_sqrt(double num){
             lower = estimate;
             }
         }
-    
+        // if (x == 29){
+           // return estimate; this will work
+        // }
+
     return (lower + upper)/2;
+    // return estimate; will not work (undefined in the context of the function)
 }
 
 int main(){
@@ -57,3 +64,10 @@ int main(){
     return 0;
 }
 
+// Recall: Scope
+// Note: Loops and If/Else statements have their own scope (even more localized variable)
+// A somewhat relevant method of determining variable scope; consider the indent of the variable (not always true)
+
+// Ways to get around this:
+// 1: Modify your code (move it around s.t. the variable is accessed "in scope")
+// 2: Declare the variable earlier in the code 
