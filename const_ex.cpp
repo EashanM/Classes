@@ -18,7 +18,7 @@ int main(){
     // *ptr = 20; Error: read-only variable is not assignable
     cout << *ptr << ' ' << x << endl;
     
-    // Declares a constant pointer to a changeable integer (the point can change the associated integer,
+    // Declares a constant pointer to a changeable integer (the pointer can change the associated integer,
     // but cannot point to a different constant)
     int y = 15;
     int * const ptr2 = &y;

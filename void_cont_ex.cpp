@@ -22,4 +22,4 @@ int main(){
     int y = 6;
     even_number(y);
     return 0;
-}   
+}  
